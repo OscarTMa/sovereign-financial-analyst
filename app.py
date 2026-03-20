@@ -31,7 +31,7 @@ if uploaded_file and api_key:
             """
             
             response = client.chat.completions.create(
-                model="nvidia/nemotron-3-super-120b",
+                model="nvidia/nemotron-3-super-120b-a12b",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1
             )
