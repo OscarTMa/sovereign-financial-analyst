@@ -17,7 +17,7 @@ Most AI financial tools "chunk" documents into small pieces, losing the narrativ
 ## 📐 System Architecture
 
 ```mermaid
-graph LR
+graph TD
     A[Unstructured PDF] --> B(PDF Engine - Ubuntu)
     B -->|Full Text Extraction| C{Nemotron 3 Super}
     
@@ -29,30 +29,25 @@ graph LR
     D & E --> F[Investment Thesis / Report]
     F -->|Secure Output| G[Financial Analyst]
 ```
-🚀 Key Features
-Zero-Chunking Architecture: Analyzes the full document structure for holistic understanding.
+## 🚀 Key Features
+- **Zero-Chunking Architecture:** Analyzes the full document structure for holistic understanding.
+- **Privacy First:** Designed for sovereign deployment on private infrastructure (NVIDIA NIM), ensuring financial data never leaves the secure environment.
+- **Hedge Fund Grade Logic:** Specialized prompts for detecting "window dressing" and accounting anomalies.
+- **Streamlit Interface:** Clean, professional dashboard for document uploading and real-time reasoning.
 
-Privacy First: Designed for sovereign deployment on private infrastructure (NVIDIA NIM), ensuring financial data never leaves the secure environment.
+## 🛠️ Tech Stack
+- **Model:** NVIDIA Nemotron 3 Super (120B) via NVIDIA Build API.
+- **Frontend:** Streamlit.
+- **PDF Processing:** `pypdf` (Optimized for financial tables).
+- **Cloud:** Hugging Face Spaces (Sovereign Configuration).
 
-Hedge Fund Grade Logic: Specialized prompts for detecting "window dressing" and accounting anomalies.
-
-Streamlit Interface: Clean, professional dashboard for document uploading and real-time reasoning.
-
-🛠️ Tech Stack
-Model: NVIDIA Nemotron 3 Super (120B) via NVIDIA Build API.
-
-Frontend: Streamlit.
-
-PDF Processing: pypdf (Optimized for financial tables).
-
-Cloud: Hugging Face Spaces (Sovereign Configuration).
-
-💻 Installation
+## 💻 Installation
 Clone the repository:
 
-Bash
+```Bash
 git clone [https://github.com/oscartm/sovereign-financial-analyst.git](https://github.com/oscartm/sovereign-financial-analyst.git)
 cd sovereign-financial-analyst
+```
 Install dependencies:
 
 Bash
