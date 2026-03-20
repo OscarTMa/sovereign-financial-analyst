@@ -13,16 +13,18 @@ def create_downloadable_pdf(text, query):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", "B", 16)
-    pdf.cell(40, 10, "Financial Intelligence Report")
-    pdf.ln(10)
+    pdf.cell(0, 10, "Financial Intelligence Report", ln=True)
     pdf.set_font("Arial", "I", 12)
-    pdf.multi_cell(0, 10, f"Analysis for: {query}")
+    pdf.cell(0, 10, f"Analysis for: {query}", ln=True)
     pdf.ln(5)
+    
     pdf.set_font("Arial", "", 11)
-    # Limpiamos caracteres que FPDF no soporta bien
+    # Limpiamos caracteres especiales para evitar errores de codificación en el PDF
     clean_text = text.encode('latin-1', 'ignore').decode('latin-1')
     pdf.multi_cell(0, 7, clean_text)
-    return pdf.output(dest='S').encode('latin-1')
+    
+    # Retornamos los bytes directamente sin el .encode() adicional que causaba el error
+    return pdf.output()
 
 # --- FUNCIÓN DE EXTRACCIÓN DE PDF ---
 def get_pdf_content(pdf_file):
@@ -77,7 +79,7 @@ if uploaded_file:
                 pdf_bytes = create_downloadable_pdf(report_content, user_query)
                 st.download_button(
                     label="📥 Download Report as PDF",
-                    data=pdf_bytes,
+                    data=pdf_bytes, # Pasamos los bytes directos
                     file_name="financial_analysis_report.pdf",
                     mime="application/pdf"
                 )
