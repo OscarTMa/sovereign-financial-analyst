@@ -1,3 +1,13 @@
+---
+    title: Sovereign Financial Analyst
+    emoji: 📈
+    colorFrom: green
+    colorTo: gray
+    sdk: streamlit
+    app_file: app.py
+    pinned: false
+---
+
 # 📈 Sovereign Financial Intelligence Analyst
 
 This AI Agent is a **Senior Hedge Fund Analyst** designed to perform deep reasoning over massive corporate financial reports (10-K, 10-Q, Annual Reports). Powered by **NVIDIA Nemotron 3 Super (120B)**, it overcomes the limitations of traditional RAG (Retrieval-Augmented Generation) by processing entire documents within a single context window.
@@ -37,10 +47,10 @@ graph TD
 - **Streamlit Interface:** Clean, professional dashboard for document uploading and real-time reasoning.
 
 ## 🛠️ Tech Stack
-- **Model:** NVIDIA Nemotron 3 Super (120B) via NVIDIA Build API.
-- **Frontend:** Streamlit.
-- **PDF Processing:** `pypdf` (Optimized for financial tables).
-- **Cloud:** Hugging Face Spaces (Sovereign Configuration).
+- **Model:** NVIDIA Nemotron 3 Super (120B) via NVIDIA Build API.                                     
+- **Frontend:** Streamlit.                               
+- **PDF Processing:** `pypdf` (Optimized for financial tables).                      
+- **Cloud:** Hugging Face Spaces (Sovereign Configuration).                             
 
 ## 💻 Installation
 1.**Clone the repository:**
@@ -61,9 +71,9 @@ Add your `NVIDIA_API_KEY` to your environment variables or Hugging Face Secrets.
 streamlit run app.py
 ```
 ## 📋 Example Use Case
-**Input:** A 200-page quarterly earnings report.
-**Reasoning:** The agent identifies that the CEO's optimistic tone regarding "future growth" (Page 2) is statistically inconsistent with the "increased debt service" mentioned in the footnotes (Page 184).
-**Result:** A "High Caution" rating with specific page references for the human analyst to review.
-
+**Input:** A 200-page quarterly earnings report.                           
+**Reasoning:** The agent identifies that the CEO's optimistic tone regarding "future growth" (Page 2) is statistically inconsistent with the "increased debt service" mentioned in the footnotes (Page 184).                    
+**Result:** A "High Caution" rating with specific page references for the human analyst to review.                          
+  
 ## 📄 License
 MIT License. Inspired by the sovereign AI methodology championed by the NVIDIA developer community.
