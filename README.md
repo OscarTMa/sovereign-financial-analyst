@@ -29,6 +29,7 @@ graph TD
     D & E --> F[Investment Thesis / Report]
     F -->|Secure Output| G[Financial Analyst]
 ```
+
 ## 🚀 Key Features
 - **Zero-Chunking Architecture:** Analyzes the full document structure for holistic understanding.
 - **Privacy First:** Designed for sovereign deployment on private infrastructure (NVIDIA NIM), ensuring financial data never leaves the secure environment.
@@ -42,27 +43,27 @@ graph TD
 - **Cloud:** Hugging Face Spaces (Sovereign Configuration).
 
 ## 💻 Installation
-Clone the repository:
-
+1.**Clone the repository:**
 ```Bash
 git clone [https://github.com/oscartm/sovereign-financial-analyst.git](https://github.com/oscartm/sovereign-financial-analyst.git)
 cd sovereign-financial-analyst
 ```
-Install dependencies:
-
-Bash
+2.**Install dependencies:**
+```Bash
 pip install -r requirements.txt
-Set your Secrets:
-Add your NVIDIA_API_KEY to your environment variables or Hugging Face Secrets.
+```
 
-Run:
+3.**Set your Secrets:**
+Add your `NVIDIA_API_KEY` to your environment variables or Hugging Face Secrets.
 
-Bash
+4.**Run:**
+```Bash
 streamlit run app.py
-📋 Example Use Case
-Input: A 200-page quarterly earnings report.
-Reasoning: The agent identifies that the CEO's optimistic tone regarding "future growth" (Page 2) is statistically inconsistent with the "increased debt service" mentioned in the footnotes (Page 184).
-Result: A "High Caution" rating with specific page references for the human analyst to review.
+```
+## 📋 Example Use Case
+**Input:** A 200-page quarterly earnings report.
+**Reasoning:** The agent identifies that the CEO's optimistic tone regarding "future growth" (Page 2) is statistically inconsistent with the "increased debt service" mentioned in the footnotes (Page 184).
+**Result:** A "High Caution" rating with specific page references for the human analyst to review.
 
-📄 License
+## 📄 License
 MIT License. Inspired by the sovereign AI methodology championed by the NVIDIA developer community.
